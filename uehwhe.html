@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tampilan Web Bagus</title>
+    <style>
+  @keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.feature-item {
+    animation: float 40s ease-in-out infinite;
+}
+  @keyframes slideIn {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+.feature-item {
+    animation: slideIn 1s ease-in-out;
+    animation-fill-mode: both;
+}
+  @keyframes rainbow {
+    0% { color: #ff0000; }
+    20% { color: #ff7f00; }
+    40% { color: #ffff00; }
+    60% { color: #00ff00; }
+    80% { color: #0000ff; }
+    100% { color: #8b00ff; }
+}
+
+h1 {
+    animation: rainbow 5s infinite;
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+    background-image: url('link_to_binary_image_from_search');
+    background-size: cover;
+}
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+
+        header h1 {
+            float: left;
+        }
+
+        nav {
+            float: right;
+            margin-top: 10px;
+        }
+
+        main {
+            padding: 20px 0;
+        }
+
+        .intro, .features {
+            margin-bottom: 20px;
+        }
+
+        .features .feature-item {
+            background: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .features .feature-item img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .button:hover {background-color: #555}
+
+        .button:active {
+            background-color: #555;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Selamat Datang di Website uji coba mas wahyu</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#" onclick="aboutPage();">Tentang</a></li>
+                    <li><a href="#">Layanan</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+<div id="aboutLayer" style="display: none; background-color: green; padding: 10px; position: relative; overflow: hidden; white-space: nowrap;">
+    <p style="position: absolute; top: 0; left: 100%; animation: trainMove 10s linear infinite;">Salam! Saya Wahyu Sutanto, seorang pemula yang penuh semangat dalam menjelajahi dunia coding. Meskipun baru memulai, antusiasme saya untuk belajar dan berkembang tidak pernah surut. Saya percaya bahwa dengan tekad dan dedikasi, saya akan menjadi seorang ahli dalam dunia coding. Mari kita bersama-sama menjelajahi dan menaklukkan dunia yang penuh dengan kode!</p>
+</div>
+
+<style>
+    @keyframes trainMove {
+        0% { left: 100%; }
+        100% { left: -100%; }
+    }
+</style>
+        <div class="container">
+            <section class="intro">
+                <h2>Pemberitahuan!!!</h2>
+                <p>Ini adalah percobaan saya menggunakan HTML, CSS, dan JavaScript.</p>
+                <button class="button" onclick="showMessage('Selamat datang di website kami!')">Klik Saya</button>
+            </section>
+            <section class="features">
+                <h2>Fitur</h2>
+                <div class="feature-item" onclick="openYouTube()">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo">
+                    <div>
+                        <h3>YouTube</h3>
+                        <p>Klik untuk membuka YouTube.</p>
+                    </div>
+                </div>
+                <div class="feature-item" onclick="openTikTok()">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/TikTok_logo.png" alt="TikTok Logo">
+                    <div>
+                        <h3>TikTok</h3>
+                        <p>Klik untuk membuka TikTok.</p>
+                    </div>
+                </div>
+                <div class="feature-item" onclick="openFacebook()">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+                    <div>
+                        <h3>Facebook</h3>
+                        <p>Klik untuk membuka Facebook.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Website Kami. Semua hak cipta dilindungi.</p>
+        </div>
+    </footer>
+    <script>
+    function aboutPage() {
+        // Mendapatkan elemen lapisan "Tentang"
+        var aboutLayer = document.getElementById('aboutLayer');
+
+        // Menampilkan lapisan "Tentang"
+        aboutLayer.style.display = 'block';
+    }
+</script>
+<script>
+        function showMessage(message) {
+            alert(message);
+        }
+
+        function openYouTube() {
+            window.open('https://www.youtube.com', '_blank');
+        }
+
+        function openTikTok() {
+            window.open('https://www.tiktok.com', '_blank');
+        }
+
+        function openFacebook() {
+            window.open('https://www.facebook.com', '_blank');
+        }
+    </script>
+</body>
+</html>
